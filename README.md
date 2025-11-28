@@ -29,24 +29,24 @@ Algorithm
 Program
 import numpy as np
 import matplotlib.pyplot as plt
-Am = 3.2
-Ac = 6.4
-fm = 217
-fc = 2170
-fs = 21700
-t = np.arange(0, 2/fm, 1/fs)
-m = Am * np.cos(2 * np.pi * fm * t)
-plt.subplot(3, 1, 1)
-plt.plot(t, m)
-c = Ac * np.cos(2 * np.pi * fc * t)
-plt.subplot(3, 1, 2)
-plt.plot(t, c)
-integral_m = np.cumsum(m) / fs
-s = Ac * np.cos(2 * np.pi * fc * t + 2 * np.pi * kf * integral_m)
-plt.subplot(3, 1, 3)
-plt.plot(t, s)
-plt.tight_layout()
-plt.show()
+Am = 3.2 
+Ac = 6.4 
+fm = 217 
+fc = 2170 
+fs = 21700 
+t = np.arange(0, 2/fm, 1/fs) 
+m = Am * np.cos(2 * np.pi * fm * t) 
+plt.subplot(3, 1, 1) 
+plt.plot(t, m) 
+c = Ac * np.cos(2 * np.pi * fc * t) 
+plt.subplot(3, 1, 2) 
+plt.plot(t, c) 
+integral_m = np.cumsum(m) / fs 
+s = Ac * np.cos(2 * np.pi * fc * t + 2 *  np.pi * kf * integral_m) 
+plt.subplot(3, 1, 3) 
+plt.plot(t, s) 
+plt.tight_layout() 
+plt.show() 
 
 Output Waveform
 
